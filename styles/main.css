@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --mainTextColor: #000;
+    --secondaryTextColor: #333;
+    --mainLinkColor: #0da2b8;
+    --mainBorderColor: #dadada;
+    --mainBgColor: #e6f7ff; /* Light blue background color */
+    --sectionBgColor: #f9f9f9; /* Light gray background for sections */
+    --highlightColor: #f0f0f0;
+    --headingColor: #0a76a9;
+}
+
+* {
+    font-family: Cambria, serif;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    color: var(--mainTextColor);
+}
+
+body {
+    background-color: var(--mainBgColor);
+    margin: 0;
+    padding: 0;
+}
+
+p, span, li {
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: 500;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+li {
+    line-height: 1.9em;
+}
+
+#container--main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.section--page {
+    padding: 1em;
+    background-color: var(--sectionBgColor);
+    border-radius: 8px;
+    margin-bottom: 2em;
+    box-shadow: 0 2px 4px var(--highlightColor);
+}
+
+/* Adjust heading alignment to center */
+.section--page h2 {
+    text-align: center;
+    color: var(--headingColor);
+    margin-bottom: 0.5em;
+}
+
+/* Adjust content alignment to slightly left-aligned */
+.section--page:not(:nth-child(4)) {
+    text-align: left;
+}
+
+/* Hero Section */
+#wrapper--hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+}
+
+#bio, a {
+    font-weight: 300;
+}
+
+#user-name {
+    font-size: 48px;
+    line-height: 1em;
+    font-weight: 600;
+    color: var(--mainTextColor);
+}
+
+#profile-pic {
+    width: 200px; /* Increased width */
+    height: 200px; /* Increased height */
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px var(--highlightColor);
+}
+
+#email {
+    color: var(--mainTextColor);
+}
+
+#socials--list {
+    display: flex;
+    justify-content: center;
+    column-gap: 2em; /* Increased gap between social links */
+    flex-wrap: wrap;
+}
+
+#socials--list a {
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+    font-size: 0.9em;
+    transition: font-weight 0.3s ease, color 0.3s ease;
+}
+
+#socials--list a:hover {
+    font-weight: 100;
+    color: var(--mainLinkColor);
+}
+
+/* Certifications Section */
+#certifications-wrapper {
+    padding: 1em;
+}
+
+.certification {
+    margin: 0.5em 0;
+    padding: 0.5em; /* Adjusted padding */
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    border-radius: 8px; /* Rounded border corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.certification a {
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.certification a:hover {
+    color: var(--mainLinkColor);
+}
+
+/* Workshops Section */
+.card--work-history {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    border-radius: 5px; /* Smaller border radius */
+    border: 1px solid var(--mainBorderColor);
+}
+
+.card--work-history p {
+    margin: 0.5em 0;
+    font-weight: 500;
+}
+
+/* Extra-Curriculars Section */
+#extra-curriculars-wrapper .card--work-history {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    border-radius: 5px; /* Smaller border radius */
+    border: 1px solid var(--mainBorderColor);
+}
+
+#extra-curriculars-wrapper .card--work-history p {
+    margin: 0.5em 0;
+    font-weight: 500;
+}
+
+.line-break {
+    background-color: var(--mainBorderColor);
+    height: 1px;
+    margin: 1em 0;
+}
+
+/* Skills Section */
+#wrapper--skills__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em; /* Small gap between skill boxes */
+}
+
+.card--skills {
+    background-color: var(--highlightColor);
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    box-shadow: 0 2px 4px var(--highlightColor);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card--skills:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--highlightColor);
+}
+
+@media (max-width: 600px) {
+    .section--page {
+        padding: 1em;
+    }
+
+    #wrapper--hero {
+        gap: 1em;
+        flex-direction: column;
+    }
+
+    #profile-pic {
+        width: 250px; /* Adjusted for larger view on smaller screens */
+        height: 250px; /* Adjusted for larger view on smaller screens */
+    }
+
+    .card--work-history {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    #wrapper--skills__items {
+        justify-content: center;
+    }
+}
